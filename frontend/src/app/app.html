@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark bg-primary mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="#">TechInventory System</a>
+    <div>
+    <button (click)="view = 'productos'" class="btn btn-outline-light me-2">Inventario</button>
+    <button (click)="view = 'usuarios'" class="btn btn-outline-light">Usuarios</button>
+    </div>
+  </div>
+</nav>
+<div class ="container mb-5">
+   <h1> Gestión de Almacén</h1>
+   <p>Bienvenido, Amo. Aquí puedes ver tus existencias actuales</p>
+</div>
+<app-product-list *ngIf="view === 'productos'"></app-product-list>
+<app-user-list *ngIf="view === 'usuarios'"></app-user-list>
